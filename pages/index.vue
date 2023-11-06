@@ -47,7 +47,7 @@ const orders = ref<OrderInProcess[]>([
     items: '6 items',
     type: 'Kitchen',
     inProgress: false,
-    cardBg: 'bg-indigo-100',
+
   },
   {
     id: 2,
@@ -56,7 +56,7 @@ const orders = ref<OrderInProcess[]>([
     items: '4 items',
     type: 'Kitchen',
     inProgress: true,
-    cardBg: 'bg-gray-200/40'
+
   },
   {
     id: 3,
@@ -65,7 +65,6 @@ const orders = ref<OrderInProcess[]>([
     items: '4 items',
     type: 'Kitchen',
     inProgress: true,
-    cardBg: 'bg-gray-200/40',
   },
 ])
 const menuItems = ref<{ id?: string | number; title?: string; desc?: string, cardBg?: string }[]>([

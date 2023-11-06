@@ -4,6 +4,5 @@ export type OrderInProcess = {
   name: string;
   items: number | string;
   type: string;
-  cardBg: string;
   inProgress: boolean;
 };
