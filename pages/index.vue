@@ -27,7 +27,7 @@
           </template>
         </div>
       </div>
-      <div class="xl:w-1/4 w-full h-full bg-green-500">Swiper area</div>
+      <!-- <div class="xl:w-1/4 w-full h-full bg-green-500">Swiper area</div> -->
     </div>
   </div>
 </template>
