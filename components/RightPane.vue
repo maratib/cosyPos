@@ -44,6 +44,7 @@ const swipeItems = ref<SwipeItems[]>([
   }
 ])
 
+
 </script>
 
 
