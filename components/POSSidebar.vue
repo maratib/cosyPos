@@ -2,7 +2,7 @@
   <aside class="fixed w-80 bg-black inset-y-0 h-screen p-6 overflow-hidden z-50 xl:block hidden">
     <div class="flex flex-wrap">
       <div class="w-full mb-10 px-4 pt-3">
-        <span class="text-white text-2xl font-bold">LOGO</span>
+        <span class="text-white text-2xl font-bold">CosyPOS</span>
       </div>
       <div class="flex flex-wrap w-full gap-4">
         <template v-for="link in links" :key="`${link.linkTitle}`">
