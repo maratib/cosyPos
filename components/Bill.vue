@@ -8,7 +8,7 @@
       <span class="text-white/80">Tax 10%</span>
       <span>$17.15</span>
     </div>
-    <div class="flex justify-between mb-72">
+    <div class="flex justify-between mb-40">
       <span class="text-2xl">Total</span>
       <span class="text-2xl">$188.65</span>
     </div>
