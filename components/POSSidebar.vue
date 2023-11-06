@@ -7,7 +7,7 @@
       <div class="flex flex-wrap w-full gap-4">
         <template v-for="link in links" :key="`${link.linkTitle}`">
           <div class="w-full">
-            <NuxtLink :to="link">
+            <NuxtLink :to="link.linkPath">
               <span class="text-lg w-full block py-3 px-4 rounded-lg transition-all ease-in-out duration-300"
                 :class="[link.isActive ? 'text-white bg-white/30' : 'text-white/70 hover:bg-white/30 hover:text-white']">{{
                   link.linkTitle
@@ -50,12 +50,12 @@ import { ref } from 'vue';
 const links = ref<{ linkTitle?: string; linkPath?: string; isActive?: boolean }[]>([
   {
     linkTitle: 'Reservation',
-    linkPath: '/',
+    linkPath: '/reservation',
     isActive: false
   },
   {
     linkTitle: 'Table Services',
-    linkPath: '/',
+    linkPath: '/services',
     isActive: false
   },
   {
@@ -65,12 +65,12 @@ const links = ref<{ linkTitle?: string; linkPath?: string; isActive?: boolean }[
   },
   {
     linkTitle: 'Delivery',
-    linkPath: '/',
+    linkPath: '/delivery',
     isActive: false
   },
   {
     linkTitle: 'Accounting',
-    linkPath: '/',
+    linkPath: '/accounting',
     isActive: false
   },
 ])
