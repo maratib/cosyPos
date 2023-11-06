@@ -1,8 +1,8 @@
 <template>
   <div class="px-4 pt-6 relative">
     <div class="flex gap-4 items-center">
-      <div class="w-14 h-14 rounded-lg flex justify-center items-center bg-gray-200/40"
-        :class="inProgress ? 'bg-gray-200/40' : 'bg-indigo-100'">
+      <div class="w-14 h-14 rounded-lg flex justify-center items-center "
+        :class="inProgress ? 'bg-white/20  text-white' : 'bg-indigo-100'">
         <span class="text-2xl">{{ icon }}</span>
       </div>
       <div>
