@@ -7,7 +7,7 @@
       <div class="flex flex-wrap w-full gap-4">
         <template v-for="link in links" :key="`${link.linkTitle}`">
           <div class="w-full">
-            <NuxtLink :to="link.linkPath">
+            <NuxtLink :to="link.linkPath" @click="onClick(link)">
               <span class="text-lg w-full block py-3 px-4 rounded-lg transition-all ease-in-out duration-300"
                 :class="[link.isActive ? 'text-white bg-white/30' : 'text-white/70 hover:bg-white/30 hover:text-white']">{{
                   link.linkTitle
@@ -47,7 +47,14 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 
-const links = ref<{ linkTitle?: string; linkPath?: string; isActive?: boolean }[]>([
+type Link = {
+  linkTitle: string;
+  linkPath: string;
+  isActive: boolean
+
+};
+
+const links = ref<Link[]>([
   {
     linkTitle: 'Reservation',
     linkPath: '/reservation',
@@ -75,5 +82,11 @@ const links = ref<{ linkTitle?: string; linkPath?: string; isActive?: boolean }[
   },
 ])
 const people = ref<string[]>(["Leslie K.", "Cameron W.", "Jacob J."])
+
+const onClick = (link: Link) => {
+  links.value.forEach(element => element.isActive = false)
+  link.isActive = true;
+
+}
 
 </script>
