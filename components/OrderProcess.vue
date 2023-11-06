@@ -1,14 +1,14 @@
 <template>
   <div class="px-4 pt-6 relative">
     <div class="flex gap-4 items-center">
-      <div class="w-14 h-14 rounded-lg flex justify-center items-center "
-        :class="inProgress ? 'bg-white/20  text-white' : 'bg-indigo-100'">
+      <div class="w-14 h-14 rounded-lg flex justify-center items-center"
+        :class="inProgress ? 'bg-white/20' : 'bg-indigo-100 text-black'">
         <span class="text-2xl">{{ icon }}</span>
       </div>
       <div>
         <span class="text-white">{{ name }}</span>
         <div class="absolute -mt-7 right-0">
-          <span v-if="inProgress" class="px-2 py-1 rounded-xl text-sm bg-green-400">in process</span>
+          <span v-if="inProgress" class="px-2 py-1 rounded-xl text-sm bg-green-400 text-black">in process</span>
         </div>
         <div class="flex items-center gap-2 mt-1">
           <span class="text-white">{{ items }} items</span>
