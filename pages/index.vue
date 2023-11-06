@@ -17,19 +17,57 @@
             </div>
           </template>
         </div>
+        <div class="w-full h-px bg-white/30 mt-8"></div>
+        <div class="w-full grid lg:grid-cols-3 md:grid-cols-2 gap-4 divide-x divide-white/30 space-2">
+          <template v-for="order in orders" :key="order.id">
+            <div>
+              <POSOrderProcess :id="order.id" :icon="order.icon" :name="order.name" :items="order.items"
+                :type="order.type" :inProgress="order.inProgress" :cardBg="order.cardBg" />
+            </div>
+          </template>
+        </div>
       </div>
-      <!-- <div class="xl:w-1/4 w-full h-full bg-green-500">2</div> -->
+      <div class="xl:w-1/4 w-full h-full bg-green-500">Swiper area</div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue';
+import type { OrderInProcess } from '~/lib/types';
 
 definePageMeta({
   layout: 'pos-layout'
 })
-
+const orders = ref<OrderInProcess[]>([
+  {
+    id: 1,
+    icon: 'T4',
+    name: 'Leslie K.',
+    items: '6 items',
+    type: 'Kitchen',
+    inProgress: false,
+    cardBg: 'bg-indigo-100',
+  },
+  {
+    id: 2,
+    icon: 'T2',
+    name: 'Jacob J.',
+    items: '4 items',
+    type: 'Kitchen',
+    inProgress: true,
+    cardBg: 'bg-gray-200/40'
+  },
+  {
+    id: 3,
+    icon: 'T4',
+    name: 'Cameron W.',
+    items: '4 items',
+    type: 'Kitchen',
+    inProgress: true,
+    cardBg: 'bg-gray-200/40',
+  },
+])
 const menuItems = ref<{ id?: string | number; title?: string; desc?: string, cardBg?: string }[]>([
   {
     id: 1,
