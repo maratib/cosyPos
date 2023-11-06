@@ -23,10 +23,10 @@
           <template v-for="person in people" :key="person">
             <div class="w-full">
               <UiBadge
-                class="border border-white/60 text-white py-2 pl-2 pr-4 transition-all duration-300 ease-in-out hover:bg-white/30 cursor-pointer"
-                variant="light">
+                class="border border-white/60 text-white py-2 pl-2 pr-4 transition-all duration-300 ease-in-out hover:bg-white/30 cursor-pointer">
                 <div class="flex items-center gap-2">
-                  <div class="w-10 h-10 rounded-full flex items-center justify-center text-xl bg-purple-200 text-black">
+                  <div class="w-10 h-10 rounded-full flex items-center justify-center text-xl text-black"
+                    :class="[person.charAt(0) === 'L' ? 'bg-purple-100' : person.charAt(0) === 'C' ? 'bg-green-100' : 'bg-red-100']">
                     {{ person.charAt(0) }}
                   </div>
                   <span class="text-white text-lg font-normal">{{ person }}</span>
