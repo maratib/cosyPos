@@ -22,12 +22,14 @@
           <template v-for="order in orders" :key="order.id">
             <div>
               <POSOrderProcess :id="order.id" :icon="order.icon" :name="order.name" :items="order.items"
-                :type="order.type" :inProgress="order.inProgress" :cardBg="order.cardBg" />
+                :type="order.type" :inProgress="order.inProgress" />
             </div>
           </template>
         </div>
       </div>
-      <!-- <div class="xl:w-1/4 w-full h-full bg-green-500">Swiper area</div> -->
+      <div class="xl:w-1/4 w-full h-full">
+        <RightPane />
+      </div>
     </div>
   </div>
 </template>
