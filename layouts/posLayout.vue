@@ -1,6 +1,6 @@
 <template>
-  <POSSidebar />
-  <POSTopbar />
+  <Sidebar />
+  <Topbar />
   <main class="xl:ml-80 p-6 mt-28">
     <slot></slot>
   </main>

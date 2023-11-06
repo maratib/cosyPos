@@ -21,14 +21,15 @@
         <div class="w-full grid lg:grid-cols-3 md:grid-cols-2 gap-4 divide-x divide-white/30 space-2">
           <template v-for="order in orders" :key="order.id">
             <div>
-              <POSOrderProcess :id="order.id" :icon="order.icon" :name="order.name" :items="order.items"
-                :type="order.type" :inProgress="order.inProgress" />
+              <OrderProcess :id="order.id" :icon="order.icon" :name="order.name" :items="order.items" :type="order.type"
+                :inProgress="order.inProgress" />
             </div>
           </template>
         </div>
       </div>
       <div class="xl:w-1/4 w-full h-full">
         <RightPane />
+        <Bill />
       </div>
     </div>
   </div>
@@ -46,7 +47,7 @@ const orders = ref<OrderInProcess[]>([
     id: 1,
     icon: 'T4',
     name: 'Leslie K.',
-    items: '6 items',
+    items: 6,
     type: 'Kitchen',
     inProgress: false,
 
@@ -55,7 +56,7 @@ const orders = ref<OrderInProcess[]>([
     id: 2,
     icon: 'T2',
     name: 'Jacob J.',
-    items: '4 items',
+    items: 4,
     type: 'Kitchen',
     inProgress: true,
 
@@ -64,7 +65,7 @@ const orders = ref<OrderInProcess[]>([
     id: 3,
     icon: 'T4',
     name: 'Cameron W.',
-    items: '4 items',
+    items: 4,
     type: 'Kitchen',
     inProgress: true,
   },

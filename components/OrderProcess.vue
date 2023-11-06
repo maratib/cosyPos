@@ -11,7 +11,7 @@
           <span v-if="inProgress" class="px-2 py-1 rounded-xl text-sm bg-green-400">in process</span>
         </div>
         <div class="flex items-center gap-2 mt-1">
-          <span class="text-white">{{ items }}</span>
+          <span class="text-white">{{ items }} items</span>
 
           <svg xmlns="http://www.w3.org/2000/svg" fill="#fff" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
             class="w-5 text-white">
